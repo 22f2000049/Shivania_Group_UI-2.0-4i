@@ -6,6 +6,21 @@
 }
 
 :root {
+  /* Updated color tokens to match original React version */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.278 0 0);
+  --card: oklch(0.973 0 0);
+  --card-foreground: oklch(0.345 0 0);
+  --primary: oklch(0.459 0.136 166.014);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.569 0.148 166.014);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.973 0 0);
+  --muted-foreground: oklch(0.278 0 0);
+  --accent: oklch(0.569 0.148 166.014);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.459 0.136 166.014 / 0.5);
+
   /* Shivania Brand Colors */
   --primary-blue: #2563eb;
   --primary-green: #16a34a;
@@ -13,9 +28,10 @@
   --emerald-500: #10b981;
   --emerald-50: #ecfdf5;
 
-  /* Gradients */
+  /* Enhanced gradients to match original design */
   --shivania-gradient: linear-gradient(135deg, #2563eb 0%, #16a34a 100%);
-  --shivania-gradient-light: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
+  --shivania-gradient-light: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(22, 163, 74, 0.05) 100%);
+  --shivania-gradient-subtle: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
 
   /* Typography */
   --font-heading: "Geist", sans-serif;
@@ -25,19 +41,44 @@
   --container-max-width: 1200px;
   --section-padding: 4rem 0;
   --mobile-padding: 2rem 0;
+
+  /* Added shadow utilities */
+  --shadow-shivania: 0 10px 25px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(22, 163, 74, 0.05);
 }
 
 body {
   font-family: var(--font-body);
   line-height: 1.6;
-  color: #1f2937;
+  color: var(--foreground);
+  /* Updated background to match original gradient */
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(22, 163, 74, 0.02) 100%);
+  min-height: 100vh;
 }
 
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Added utility classes for consistent styling */
+.text-shivania-gradient {
+  background: var(--shivania-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-shivania-gradient {
+  background: var(--shivania-gradient);
+}
+
+.bg-shivania-gradient-light {
+  background: var(--shivania-gradient-light);
+}
+
+.shadow-shivania {
+  box-shadow: var(--shadow-shivania);
 }
 
 /* Navigation */
@@ -199,6 +240,8 @@ body {
   position: relative;
   height: 600px;
   overflow: hidden;
+  /* Enhanced hero slider with better gradients */
+  background: var(--shivania-gradient-subtle);
 }
 
 .slider-container {
@@ -240,6 +283,7 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  /* Applied gradient text effect */
   background: var(--shivania-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -335,6 +379,7 @@ body {
   padding: var(--section-padding);
   background: var(--shivania-gradient-light);
   text-align: center;
+  backdrop-filter: blur(10px);
 }
 
 .about-banner h2 {
@@ -420,10 +465,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  background: var(--shivania-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1f2937;
 }
 
 .categories-grid {
@@ -434,17 +476,17 @@ body {
 }
 
 .category-card {
-  background: white;
+  background: var(--card);
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
 }
 
 .category-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-shivania);
 }
 
 .category-icon {
@@ -505,7 +547,8 @@ body {
 /* Product Highlights */
 .product-highlights {
   padding: var(--section-padding);
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .product-highlights h2 {
@@ -788,15 +831,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
-  border-top: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
   padding: 0.5rem 0;
   z-index: 1000;
-}
-
-.mobile-bottom-nav {
-  display: flex;
-  justify-content: space-around;
 }
 
 .nav-item {
@@ -804,13 +843,20 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #6b7280;
+  color: var(--muted-foreground);
   font-size: 0.75rem;
   transition: color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .nav-item.active {
-  color: var(--emerald-600);
+  color: var(--primary);
+  background: var(--shivania-gradient-light);
+}
+
+.nav-item:hover {
+  color: var(--primary);
 }
 
 .nav-item i {
@@ -840,10 +886,12 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    padding: 2rem 1rem;
   }
 
   .categories-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .download-form {
@@ -859,7 +907,7 @@ body {
   }
 
   body {
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
 
   .carousel-track {
@@ -868,6 +916,15 @@ body {
 
   .product-card {
     width: 250px;
+  }
+
+  /* Better mobile spacing */
+  .hero-slider {
+    height: 500px;
+  }
+
+  .announcement-marquee {
+    margin-top: 60px;
   }
 }
 
@@ -887,5 +944,18 @@ body {
 
   .product-card {
     width: 220px;
+  }
+
+  /* Extra small screen optimizations */
+  .hero-slider {
+    height: 450px;
+  }
+
+  .slide-content {
+    padding: 1rem;
+  }
+
+  .category-card {
+    padding: 1.5rem;
   }
 }

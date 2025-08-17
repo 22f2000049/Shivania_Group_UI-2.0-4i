@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Categories - Hs Shivania Group</title>
+    <title>All Categories - Hs Shivania Group | One App, All Solutions</title>
+    <meta name="description" content="Explore our comprehensive range of industrial and business solutions across all categories.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/categories.css">
     <link rel="icon" href="assets/images/shivania-logo.png" type="image/png">
 </head>
@@ -12,22 +17,31 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo-img">
-                <span class="logo-text">SHIVANIA GROUP</span>
+            <div class="nav-brand">
+                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo">
+                <span class="brand-text">Shivania Group</span>
             </div>
             
-            <div class="nav-menu" id="nav-menu">
+            <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="categories.html" class="nav-link active">Categories</a>
-                <a href="about.html" class="nav-link">About</a>
+                <a href="categories.html" class="nav-link active">All Categories</a>
+                <a href="about.html" class="nav-link">About Us</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
             <div class="nav-actions">
-                <button class="search-btn" onclick="toggleSearch()">🔍</button>
-                <a href="liked.html" class="liked-btn">❤️ <span class="badge">6</span></a>
-                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -41,22 +55,22 @@
     </div>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" style="margin-top: 70px; padding-bottom: 80px;">
         <div class="container">
             <!-- Page Header -->
-            <section class="page-header">
-                <h1 class="page-title">All Categories</h1>
-                <p class="page-subtitle">Explore our comprehensive range of industrial and business solutions</p>
+            <section class="page-header" style="padding: 4rem 0 2rem; text-align: center; background: var(--shivania-gradient-light); margin: 0 -1rem 2rem; border-radius: 1rem;">
+                <h1 class="page-title" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: var(--shivania-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">All Categories</h1>
+                <p class="page-subtitle" style="font-size: 1.25rem; color: #6b7280;">Explore our comprehensive range of industrial and business solutions</p>
             </section>
 
             <!-- Search and Filter Bar -->
-            <section class="filter-bar">
-                <div class="search-box">
-                    <input type="text" placeholder="Search categories..." class="category-search">
-                    <button class="search-btn-inline">🔍</button>
+            <section class="filter-bar" style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <div class="search-box" style="flex: 1; min-width: 300px; position: relative;">
+                    <input type="text" placeholder="Search categories..." class="category-search" style="width: 100%; padding: 1rem 3rem 1rem 1rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                    <button class="search-btn-inline" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.25rem; cursor: pointer;"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="filter-options">
-                    <select class="filter-select">
+                    <select class="filter-select" style="padding: 1rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem; min-width: 200px;">
                         <option value="all">All Categories</option>
                         <option value="industrial">Industrial</option>
                         <option value="cleaning">Cleaning & Household</option>
@@ -66,141 +80,140 @@
             </section>
 
             <!-- Categories Grid -->
-            <section class="categories-grid">
+            <section class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
                 <!-- Industrial Categories -->
-                <div class="category-card" data-category="industrial">
-                    <div class="category-icon">🔧</div>
-                    <h3 class="category-title">Adhesives & Sealants</h3>
-                    <p class="category-description">Industrial grade adhesives, sealants, and bonding solutions</p>
-                    <div class="category-stats">
-                        <span class="product-count">150+ Products</span>
-                        <span class="subcategory-count">8 Subcategories</span>
+                <div class="category-card" data-category="industrial" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-tools"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Adhesives & Sealants</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Industrial grade adhesives, sealants, and bonding solutions</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">150+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">8 Subcategories</span>
                     </div>
-                    <a href="category-adhesives.html" class="category-link">View Products →</a>
+                    <a href="category-adhesives.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="industrial">
-                    <div class="category-icon">🏗️</div>
-                    <h3 class="category-title">Construction Materials</h3>
-                    <p class="category-description">Building materials, machinery, and construction equipment</p>
-                    <div class="category-stats">
-                        <span class="product-count">200+ Products</span>
-                        <span class="subcategory-count">12 Subcategories</span>
+                <div class="category-card" data-category="industrial" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-hammer"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Construction Materials</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Building materials, machinery, and construction equipment</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">200+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">12 Subcategories</span>
                     </div>
-                    <a href="category-construction.html" class="category-link">View Products →</a>
+                    <a href="category-construction.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="industrial">
-                    <div class="category-icon">⚡</div>
-                    <h3 class="category-title">Electrical & Electronics</h3>
-                    <p class="category-description">Electrical components, wiring, and electronic equipment</p>
-                    <div class="category-stats">
-                        <span class="product-count">300+ Products</span>
-                        <span class="subcategory-count">15 Subcategories</span>
+                <div class="category-card" data-category="industrial" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-bolt"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Electrical & Electronics</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Electrical components, wiring, and electronic equipment</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">300+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">15 Subcategories</span>
                     </div>
-                    <a href="category-electrical.html" class="category-link">View Products →</a>
+                    <a href="category-electrical.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="industrial">
-                    <div class="category-icon">🏭</div>
-                    <h3 class="category-title">Industrial Supplies</h3>
-                    <p class="category-description">General industrial supplies and manufacturing equipment</p>
-                    <div class="category-stats">
-                        <span class="product-count">250+ Products</span>
-                        <span class="subcategory-count">10 Subcategories</span>
+                <div class="category-card" data-category="industrial" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-industry"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Industrial Supplies</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">General industrial supplies and manufacturing equipment</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">250+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">10 Subcategories</span>
                     </div>
-                    <a href="category-industrial.html" class="category-link">View Products →</a>
+                    <a href="category-industrial.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="industrial">
-                    <div class="category-icon">🔧</div>
-                    <h3 class="category-title">Plumbing & Fittings</h3>
-                    <p class="category-description">Pipes, fittings, valves, and plumbing accessories</p>
-                    <div class="category-stats">
-                        <span class="product-count">180+ Products</span>
-                        <span class="subcategory-count">9 Subcategories</span>
+                <div class="category-card" data-category="industrial" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-plug"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Plumbing & Fittings</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Pipes, fittings, valves, and plumbing accessories</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">180+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">9 Subcategories</span>
                     </div>
-                    <a href="category-plumbing.html" class="category-link">View Products →</a>
+                    <a href="category-plumbing.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="industrial">
-                    <div class="category-icon">🦺</div>
-                    <h3 class="category-title">Safety Products</h3>
-                    <p class="category-description">Personal protective equipment and safety gear</p>
-                    <div class="category-stats">
-                        <span class="product-count">120+ Products</span>
-                        <span class="subcategory-count">7 Subcategories</span>
+                <div class="category-card" data-category="industrial" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-helmet-safety"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Safety Products</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Personal protective equipment and safety gear</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">120+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">7 Subcategories</span>
                     </div>
-                    <a href="category-safety.html" class="category-link">View Products →</a>
+                    <a href="category-safety.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="tools">
-                    <div class="category-icon">🔨</div>
-                    <h3 class="category-title">Power Tools</h3>
-                    <p class="category-description">Electric and battery-powered tools for professionals</p>
-                    <div class="category-stats">
-                        <span class="product-count">90+ Products</span>
-                        <span class="subcategory-count">6 Subcategories</span>
+                <div class="category-card" data-category="tools" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-hammer"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Power Tools</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Electric and battery-powered tools for professionals</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">90+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">6 Subcategories</span>
                     </div>
-                    <a href="category-power-tools.html" class="category-link">View Products →</a>
+                    <a href="category-power-tools.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="tools">
-                    <div class="category-icon">🔧</div>
-                    <h3 class="category-title">Hand Tools</h3>
-                    <p class="category-description">Manual tools for various applications and trades</p>
-                    <div class="category-stats">
-                        <span class="product-count">150+ Products</span>
-                        <span class="subcategory-count">8 Subcategories</span>
+                <div class="category-card" data-category="tools" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-tools"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Hand Tools</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Manual tools for various applications and trades</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">150+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">8 Subcategories</span>
                     </div>
-                    <a href="category-hand-tools.html" class="category-link">View Products →</a>
+                    <a href="category-hand-tools.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="cleaning">
-                    <div class="category-icon">🧽</div>
-                    <h3 class="category-title">Housekeeping Supplies</h3>
-                    <p class="category-description">Cleaning supplies and housekeeping equipment</p>
-                    <div class="category-stats">
-                        <span class="product-count">80+ Products</span>
-                        <span class="subcategory-count">5 Subcategories</span>
+                <div class="category-card" data-category="cleaning" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-broom"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Housekeeping Supplies</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Cleaning supplies and housekeeping equipment</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">80+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">5 Subcategories</span>
                     </div>
-                    <a href="category-housekeeping.html" class="category-link">View Products →</a>
+                    <a href="category-housekeeping.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
 
-                <div class="category-card" data-category="cleaning">
-                    <div class="category-icon">🌿</div>
-                    <h3 class="category-title">Garden Care</h3>
-                    <p class="category-description">Gardening tools, fertilizers, and plant care products</p>
-                    <div class="category-stats">
-                        <span class="product-count">60+ Products</span>
-                        <span class="subcategory-count">4 Subcategories</span>
+                <div class="category-card" data-category="cleaning" style="background: white; padding: 2rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border); text-align: center;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-shivania)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div class="category-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--shivania-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;"><i class="fas fa-leaf"></i></div>
+                    <h3 class="category-title" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Garden Care</h3>
+                    <p class="category-description" style="color: #6b7280; margin-bottom: 1.5rem;">Gardening tools, fertilizers, and plant care products</p>
+                    <div class="category-stats" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                        <span class="product-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">60+ Products</span>
+                        <span class="subcategory-count" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">4 Subcategories</span>
                     </div>
-                    <a href="category-garden.html" class="category-link">View Products →</a>
+                    <a href="category-garden.html" class="category-link" style="background: var(--shivania-gradient); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View Products →</a>
                 </div>
             </section>
         </div>
     </main>
 
     <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav">
         <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Home</span>
+            <i class="fas fa-home"></i>
+            <span>Home</span>
         </a>
         <a href="categories.html" class="nav-item active">
-            <span class="nav-icon">📂</span>
-            <span class="nav-label">Categories</span>
+            <i class="fas fa-th-large"></i>
+            <span>Categories</span>
         </a>
         <a href="liked.html" class="nav-item">
-            <span class="nav-icon">❤️</span>
-            <span class="nav-label">Liked</span>
-            <span class="nav-badge">6</span>
+            <i class="fas fa-heart"></i>
+            <span>Liked</span>
         </a>
-        <a href="contact.html" class="nav-item">
-            <span class="nav-icon">📞</span>
-            <span class="nav-label">Contact</span>
+        <a href="#" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
         </a>
-    </nav>
+    </div>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/categories.js"></script>

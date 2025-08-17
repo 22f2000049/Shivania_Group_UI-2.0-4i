@@ -3,44 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liked Products - Hs Shivania Group</title>
+    <title>Liked Products - Hs Shivania Group | One App, All Solutions</title>
+    <meta name="description" content="Your favorite products saved for later - Hs Shivania Group wishlist.">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/liked.css">
     <link rel="icon" href="assets/images/shivania-logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo-img">
-                <span class="logo-text">SHIVANIA GROUP</span>
+            <div class="nav-brand">
+                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo">
+                <span class="brand-text">Shivania Group</span>
             </div>
             
-            <div class="nav-menu" id="nav-menu">
+            <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="categories.html" class="nav-link">Categories</a>
-                <a href="about.html" class="nav-link">About</a>
+                <a href="categories.html" class="nav-link">All Categories</a>
+                <a href="about.html" class="nav-link">About Us</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
             <div class="nav-actions">
-                <button class="search-btn" onclick="toggleSearch()">🔍</button>
-                <a href="liked.html" class="liked-btn active">❤️ <span class="badge">6</span></a>
-                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" style="margin-top: 70px; padding-bottom: 80px;">
         <div class="container">
             <!-- Page Header -->
-            <section class="page-header">
-                <h1 class="page-title">Liked Products</h1>
-                <p class="page-subtitle">Your favorite products saved for later</p>
-                <div class="liked-stats">
-                    <span class="total-liked">6 items saved</span>
+            <section class="page-header" style="padding: 4rem 0 2rem; text-align: center; background: var(--shivania-gradient-light); margin: 0 -1rem 2rem; border-radius: 1rem;">
+                <h1 class="page-title" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: var(--shivania-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Liked Products</h1>
+                <p class="page-subtitle" style="font-size: 1.25rem; color: #6b7280;">Your favorite products saved for later</p>
+                <div class="liked-stats" style="margin-top: 1rem;">
+                    <span class="total-liked" style="background: var(--emerald-50); color: var(--emerald-600); padding: 0.5rem 1rem; border-radius: 1rem; font-weight: 500;">6 items saved</span>
                 </div>
             </section>
 
@@ -166,25 +180,24 @@
     </main>
 
     <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav">
         <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Home</span>
+            <i class="fas fa-home"></i>
+            <span>Home</span>
         </a>
         <a href="categories.html" class="nav-item">
-            <span class="nav-icon">📂</span>
-            <span class="nav-label">Categories</span>
+            <i class="fas fa-th-large"></i>
+            <span>Categories</span>
         </a>
         <a href="liked.html" class="nav-item active">
-            <span class="nav-icon">❤️</span>
-            <span class="nav-label">Liked</span>
-            <span class="nav-badge">6</span>
+            <i class="fas fa-heart"></i>
+            <span>Liked</span>
         </a>
-        <a href="contact.html" class="nav-item">
-            <span class="nav-icon">📞</span>
-            <span class="nav-label">Contact</span>
+        <a href="#" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
         </a>
-    </nav>
+    </div>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/liked.js"></script>

@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Hs Shivania Group</title>
+    <title>Contact Us - Hs Shivania Group | One App, All Solutions</title>
+    <meta name="description" content="Get in touch with Hs Shivania Group for any inquiries or support. We're here to help with your business needs.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="icon" href="assets/images/shivania-logo.png" type="image/png">
 </head>
@@ -12,37 +17,46 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo-img">
-                <span class="logo-text">SHIVANIA GROUP</span>
+            <div class="nav-brand">
+                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo">
+                <span class="brand-text">Shivania Group</span>
             </div>
             
-            <div class="nav-menu" id="nav-menu">
+            <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="categories.html" class="nav-link">Categories</a>
-                <a href="about.html" class="nav-link">About</a>
+                <a href="categories.html" class="nav-link">All Categories</a>
+                <a href="about.html" class="nav-link">About Us</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
             </div>
             
             <div class="nav-actions">
-                <button class="search-btn" onclick="toggleSearch()">🔍</button>
-                <a href="liked.html" class="liked-btn">❤️ <span class="badge">6</span></a>
-                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" style="margin-top: 70px; padding-bottom: 80px;">
         <div class="container">
             <!-- Page Header -->
-            <section class="page-header">
-                <h1 class="page-title">Contact Us</h1>
-                <p class="page-subtitle">Get in touch with our team for any inquiries or support</p>
+            <section class="page-header" style="padding: 4rem 0 2rem; text-align: center; background: var(--shivania-gradient-light); margin: 0 -1rem 3rem; border-radius: 1rem;">
+                <h1 class="page-title" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: var(--shivania-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Contact Us</h1>
+                <p class="page-subtitle" style="font-size: 1.25rem; color: #6b7280;">Get in touch with our team for any inquiries or support</p>
             </section>
 
             <!-- Contact Content -->
-            <div class="contact-content">
+            <div class="contact-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
                 <!-- Contact Form -->
                 <section class="contact-form-section">
                     <h2 class="section-title">Send us a Message</h2>
@@ -151,25 +165,24 @@
     </main>
 
     <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav">
         <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Home</span>
+            <i class="fas fa-home"></i>
+            <span>Home</span>
         </a>
         <a href="categories.html" class="nav-item">
-            <span class="nav-icon">📂</span>
-            <span class="nav-label">Categories</span>
+            <i class="fas fa-th-large"></i>
+            <span>Categories</span>
         </a>
         <a href="liked.html" class="nav-item">
-            <span class="nav-icon">❤️</span>
-            <span class="nav-label">Liked</span>
-            <span class="nav-badge">6</span>
+            <i class="fas fa-heart"></i>
+            <span>Liked</span>
         </a>
-        <a href="contact.html" class="nav-item active">
-            <span class="nav-icon">📞</span>
-            <span class="nav-label">Contact</span>
+        <a href="#" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
         </a>
-    </nav>
+    </div>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contact.js"></script>
