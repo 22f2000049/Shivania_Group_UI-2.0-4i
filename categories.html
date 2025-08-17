@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Categories - Hs Shivania Group</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="icon" href="assets/images/shivania-logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo-img">
+                <span class="logo-text">SHIVANIA GROUP</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link active">Categories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" onclick="toggleSearch()">🔍</button>
+                <a href="liked.html" class="liked-btn">❤️ <span class="badge">6</span></a>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <input type="text" placeholder="Search products..." class="search-input">
+            <button class="search-close" onclick="toggleSearch()">✕</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">All Categories</h1>
+                <p class="page-subtitle">Explore our comprehensive range of industrial and business solutions</p>
+            </section>
+
+            <!-- Search and Filter Bar -->
+            <section class="filter-bar">
+                <div class="search-box">
+                    <input type="text" placeholder="Search categories..." class="category-search">
+                    <button class="search-btn-inline">🔍</button>
+                </div>
+                <div class="filter-options">
+                    <select class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="cleaning">Cleaning & Household</option>
+                        <option value="tools">Tools & Equipment</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Categories Grid -->
+            <section class="categories-grid">
+                <!-- Industrial Categories -->
+                <div class="category-card" data-category="industrial">
+                    <div class="category-icon">🔧</div>
+                    <h3 class="category-title">Adhesives & Sealants</h3>
+                    <p class="category-description">Industrial grade adhesives, sealants, and bonding solutions</p>
+                    <div class="category-stats">
+                        <span class="product-count">150+ Products</span>
+                        <span class="subcategory-count">8 Subcategories</span>
+                    </div>
+                    <a href="category-adhesives.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="industrial">
+                    <div class="category-icon">🏗️</div>
+                    <h3 class="category-title">Construction Materials</h3>
+                    <p class="category-description">Building materials, machinery, and construction equipment</p>
+                    <div class="category-stats">
+                        <span class="product-count">200+ Products</span>
+                        <span class="subcategory-count">12 Subcategories</span>
+                    </div>
+                    <a href="category-construction.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="industrial">
+                    <div class="category-icon">⚡</div>
+                    <h3 class="category-title">Electrical & Electronics</h3>
+                    <p class="category-description">Electrical components, wiring, and electronic equipment</p>
+                    <div class="category-stats">
+                        <span class="product-count">300+ Products</span>
+                        <span class="subcategory-count">15 Subcategories</span>
+                    </div>
+                    <a href="category-electrical.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="industrial">
+                    <div class="category-icon">🏭</div>
+                    <h3 class="category-title">Industrial Supplies</h3>
+                    <p class="category-description">General industrial supplies and manufacturing equipment</p>
+                    <div class="category-stats">
+                        <span class="product-count">250+ Products</span>
+                        <span class="subcategory-count">10 Subcategories</span>
+                    </div>
+                    <a href="category-industrial.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="industrial">
+                    <div class="category-icon">🔧</div>
+                    <h3 class="category-title">Plumbing & Fittings</h3>
+                    <p class="category-description">Pipes, fittings, valves, and plumbing accessories</p>
+                    <div class="category-stats">
+                        <span class="product-count">180+ Products</span>
+                        <span class="subcategory-count">9 Subcategories</span>
+                    </div>
+                    <a href="category-plumbing.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="industrial">
+                    <div class="category-icon">🦺</div>
+                    <h3 class="category-title">Safety Products</h3>
+                    <p class="category-description">Personal protective equipment and safety gear</p>
+                    <div class="category-stats">
+                        <span class="product-count">120+ Products</span>
+                        <span class="subcategory-count">7 Subcategories</span>
+                    </div>
+                    <a href="category-safety.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="tools">
+                    <div class="category-icon">🔨</div>
+                    <h3 class="category-title">Power Tools</h3>
+                    <p class="category-description">Electric and battery-powered tools for professionals</p>
+                    <div class="category-stats">
+                        <span class="product-count">90+ Products</span>
+                        <span class="subcategory-count">6 Subcategories</span>
+                    </div>
+                    <a href="category-power-tools.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="tools">
+                    <div class="category-icon">🔧</div>
+                    <h3 class="category-title">Hand Tools</h3>
+                    <p class="category-description">Manual tools for various applications and trades</p>
+                    <div class="category-stats">
+                        <span class="product-count">150+ Products</span>
+                        <span class="subcategory-count">8 Subcategories</span>
+                    </div>
+                    <a href="category-hand-tools.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="cleaning">
+                    <div class="category-icon">🧽</div>
+                    <h3 class="category-title">Housekeeping Supplies</h3>
+                    <p class="category-description">Cleaning supplies and housekeeping equipment</p>
+                    <div class="category-stats">
+                        <span class="product-count">80+ Products</span>
+                        <span class="subcategory-count">5 Subcategories</span>
+                    </div>
+                    <a href="category-housekeeping.html" class="category-link">View Products →</a>
+                </div>
+
+                <div class="category-card" data-category="cleaning">
+                    <div class="category-icon">🌿</div>
+                    <h3 class="category-title">Garden Care</h3>
+                    <p class="category-description">Gardening tools, fertilizers, and plant care products</p>
+                    <div class="category-stats">
+                        <span class="product-count">60+ Products</span>
+                        <span class="subcategory-count">4 Subcategories</span>
+                    </div>
+                    <a href="category-garden.html" class="category-link">View Products →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="categories.html" class="nav-item active">
+            <span class="nav-icon">📂</span>
+            <span class="nav-label">Categories</span>
+        </a>
+        <a href="liked.html" class="nav-item">
+            <span class="nav-icon">❤️</span>
+            <span class="nav-label">Liked</span>
+            <span class="nav-badge">6</span>
+        </a>
+        <a href="contact.html" class="nav-item">
+            <span class="nav-icon">📞</span>
+            <span class="nav-label">Contact</span>
+        </a>
+    </nav>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/categories.js"></script>
+</body>
+</html>

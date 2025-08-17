@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Products - Hs Shivania Group</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/liked.css">
+    <link rel="icon" href="assets/images/shivania-logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo-img">
+                <span class="logo-text">SHIVANIA GROUP</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" onclick="toggleSearch()">🔍</button>
+                <a href="liked.html" class="liked-btn active">❤️ <span class="badge">6</span></a>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">Liked Products</h1>
+                <p class="page-subtitle">Your favorite products saved for later</p>
+                <div class="liked-stats">
+                    <span class="total-liked">6 items saved</span>
+                </div>
+            </section>
+
+            <!-- View Toggle and Actions -->
+            <div class="toolbar">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">⊞ Grid</button>
+                    <button class="view-btn" data-view="list">☰ List</button>
+                </div>
+                <div class="bulk-actions">
+                    <button class="bulk-btn" onclick="clearAllLiked()">🗑️ Clear All</button>
+                    <button class="bulk-btn" onclick="shareWishlist()">📤 Share</button>
+                </div>
+            </div>
+
+            <!-- Liked Products Grid -->
+            <section class="liked-products" id="liked-products">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/power-drill.png" alt="Professional Power Drill">
+                        <button class="remove-liked" onclick="removeLiked(this)">❤️</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Professional Power Drill</h3>
+                        <p class="product-category">Power Tools</p>
+                        <div class="product-price">₹4,999</div>
+                        <div class="product-actions">
+                            <button class="action-btn primary">Add to Cart</button>
+                            <button class="action-btn secondary">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/safety-helmet.png" alt="Safety Helmet">
+                        <button class="remove-liked" onclick="removeLiked(this)">❤️</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Industrial Safety Helmet</h3>
+                        <p class="product-category">Safety Products</p>
+                        <div class="product-price">₹899</div>
+                        <div class="product-actions">
+                            <button class="action-btn primary">Add to Cart</button>
+                            <button class="action-btn secondary">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/cleaning-supplies.png" alt="Cleaning Kit">
+                        <button class="remove-liked" onclick="removeLiked(this)">❤️</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Professional Cleaning Kit</h3>
+                        <p class="product-category">Housekeeping</p>
+                        <div class="product-price">₹1,299</div>
+                        <div class="product-actions">
+                            <button class="action-btn primary">Add to Cart</button>
+                            <button class="action-btn secondary">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/electrical-wire.png" alt="Electrical Wire">
+                        <button class="remove-liked" onclick="removeLiked(this)">❤️</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Copper Electrical Wire</h3>
+                        <p class="product-category">Electrical</p>
+                        <div class="product-price">₹2,499</div>
+                        <div class="product-actions">
+                            <button class="action-btn primary">Add to Cart</button>
+                            <button class="action-btn secondary">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/hand-tools.png" alt="Hand Tool Set">
+                        <button class="remove-liked" onclick="removeLiked(this)">❤️</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Professional Hand Tool Set</h3>
+                        <p class="product-category">Hand Tools</p>
+                        <div class="product-price">₹3,499</div>
+                        <div class="product-actions">
+                            <button class="action-btn primary">Add to Cart</button>
+                            <button class="action-btn secondary">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/garden-tools.png" alt="Garden Tools">
+                        <button class="remove-liked" onclick="removeLiked(this)">❤️</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Garden Care Tool Set</h3>
+                        <p class="product-category">Garden Care</p>
+                        <div class="product-price">₹1,899</div>
+                        <div class="product-actions">
+                            <button class="action-btn primary">Add to Cart</button>
+                            <button class="action-btn secondary">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Empty State (hidden by default) -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <div class="empty-icon">💔</div>
+                <h2>No liked products yet</h2>
+                <p>Start exploring our categories to find products you love!</p>
+                <a href="categories.html" class="explore-btn">Explore Categories</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="categories.html" class="nav-item">
+            <span class="nav-icon">📂</span>
+            <span class="nav-label">Categories</span>
+        </a>
+        <a href="liked.html" class="nav-item active">
+            <span class="nav-icon">❤️</span>
+            <span class="nav-label">Liked</span>
+            <span class="nav-badge">6</span>
+        </a>
+        <a href="contact.html" class="nav-item">
+            <span class="nav-icon">📞</span>
+            <span class="nav-label">Contact</span>
+        </a>
+    </nav>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/liked.js"></script>
+</body>
+</html>

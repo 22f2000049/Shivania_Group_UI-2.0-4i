@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hs Shivania Group - Manufacturing & Business Solutions</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/images/shivania-logo.png" alt="Shivania Group" class="logo">
+                <span class="brand-text">Shivania Group</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="categories.html" class="nav-link">All Categories</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Announcement Marquee -->
+    <div class="announcement-marquee">
+        <div class="marquee-content">
+            <span class="announcement-item">
+                <i class="fas fa-fire"></i>
+                Flash Sale: Up to 50% off on Power Tools - Limited Time!
+            </span>
+            <span class="announcement-item">
+                <i class="fas fa-tag"></i>
+                Price Drop Alert: Industrial Supplies starting from ₹99
+            </span>
+            <span class="announcement-item">
+                <i class="fas fa-star"></i>
+                New Arrivals: Latest Safety Equipment Collection
+            </span>
+            <span class="announcement-item">
+                <i class="fas fa-truck"></i>
+                Free Shipping on orders above ₹2,999
+            </span>
+        </div>
+    </div>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Professional Manufacturing Solutions</h1>
+                        <p>Complete range of industrial supplies, tools, and equipment for your business needs</p>
+                        <button class="cta-btn">Explore Products</button>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/hero-manufacturing.png" alt="Manufacturing Solutions">
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Quality Tools & Equipment</h1>
+                        <p>Premium power tools, hand tools, and industrial equipment from trusted brands</p>
+                        <button class="cta-btn">Shop Tools</button>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/hero-tools.png" alt="Quality Tools">
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Safety First Solutions</h1>
+                        <p>Comprehensive safety products and equipment to protect your workforce</p>
+                        <button class="cta-btn">View Safety Products</button>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/hero-safety.png" alt="Safety Solutions">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- About Banner -->
+    <section class="about-banner">
+        <div class="container">
+            <h2>One App, All Solutions</h2>
+            <p>Your trusted partner for comprehensive manufacturing and business solutions</p>
+        </div>
+    </section>
+
+    <!-- Trusted Partners -->
+    <section class="trusted-partners">
+        <div class="container">
+            <h2>Trusted by Leading Companies</h2>
+            <div class="partners-scroll">
+                <div class="partner-logo"><img src="assets/images/partner1.png" alt="Partner 1"></div>
+                <div class="partner-logo"><img src="assets/images/partner2.png" alt="Partner 2"></div>
+                <div class="partner-logo"><img src="assets/images/partner3.png" alt="Partner 3"></div>
+                <div class="partner-logo"><img src="assets/images/partner4.png" alt="Partner 4"></div>
+                <div class="partner-logo"><img src="assets/images/partner5.png" alt="Partner 5"></div>
+                <div class="partner-logo"><img src="assets/images/partner6.png" alt="Partner 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <h2>Our Product Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Power Tools</h3>
+                    <p>Professional grade power tools for all applications</p>
+                    <span class="product-count">150+ Products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Electrical & Electronics</h3>
+                    <p>Complete electrical solutions and components</p>
+                    <span class="product-count">200+ Products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial Supplies</h3>
+                    <p>Essential industrial equipment and supplies</p>
+                    <span class="product-count">300+ Products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety Products</h3>
+                    <p>Comprehensive safety equipment and gear</p>
+                    <span class="product-count">120+ Products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Hand Tools</h3>
+                    <p>Quality hand tools for precision work</p>
+                    <span class="product-count">180+ Products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Construction Materials</h3>
+                    <p>Building materials and construction supplies</p>
+                    <span class="product-count">250+ Products</span>
+                </div>
+            </div>
+            <div class="view-all-btn">
+                <a href="categories.html" class="btn-primary">View All Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Highlights -->
+    <section class="product-highlights">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-carousel" id="featuredCarousel">
+                <div class="carousel-track">
+                    <div class="product-card">
+                        <img src="assets/images/drill-machine.png" alt="Professional Drill Machine">
+                        <h3>Professional Drill Machine</h3>
+                        <p class="price">₹4,999</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/safety-helmet.png" alt="Safety Helmet">
+                        <h3>Industrial Safety Helmet</h3>
+                        <p class="price">₹899</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/welding-machine.png" alt="Welding Machine">
+                        <h3>Arc Welding Machine</h3>
+                        <p class="price">₹12,999</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/measuring-tape.png" alt="Measuring Tape">
+                        <h3>Professional Measuring Tape</h3>
+                        <p class="price">₹299</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="featuredPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" id="featuredNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Festive Banner -->
+    <section class="festive-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>🎉 Special Diwali Offer!</h2>
+                <p>Get up to 40% off on all categories. Limited time offer!</p>
+                <button class="offer-btn">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Download -->
+    <section class="brochure-download">
+        <div class="container">
+            <div class="brochure-content">
+                <h2>Download Our Product Catalog</h2>
+                <p>Get the complete catalog with detailed specifications and pricing</p>
+                <div class="download-form">
+                    <input type="email" placeholder="Enter your email address" id="brochureEmail">
+                    <button class="download-btn">Download Catalog</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hs Shivania Group</h3>
+                    <p>Your trusted partner for manufacturing and business solutions since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html#power-tools">Power Tools</a></li>
+                        <li><a href="categories.html#electrical">Electrical</a></li>
+                        <li><a href="categories.html#industrial">Industrial Supplies</a></li>
+                        <li><a href="categories.html#safety">Safety Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@shivaniagroup.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hs Shivania Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="categories.html" class="nav-item">
+            <i class="fas fa-th-large"></i>
+            <span>Categories</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Liked</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+        </a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
